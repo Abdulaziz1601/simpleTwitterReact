@@ -1,8 +1,10 @@
 import React from 'react';
 
-import './post-list.css'
-// Our programm will each post
 import PostListItem from '../post-list-item';
+import { ListGroup } from 'reactstrap';
+
+import './post-list.css'
+
 // Destructuring the props
 const PostList = ({posts}) => {
     // map transforms an array and returns as new
@@ -28,9 +30,9 @@ const PostList = ({posts}) => {
         //     <PostList label={posts[2].label} important={posts[2].important} /> 
         //     {/* Important by default will be true */}
         // </ul>
-        <ul className="app-list list-group">
+        <ListGroup className="app-list">
             {elements }
-        </ul>
+        </ListGroup>
     )
 }
 

@@ -1,7 +1,16 @@
 import React from 'react';  // We are importing react to work with it
 import ReactDOM from 'react-dom'; // react-dom to work with DOM
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './components/app/';
+
+ReactDOM.render(
+  <React.StrictMode>
+	  <App/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
 
 // // If we leave our WhoAmI component like this, It'll give us error
 // // But in react we have technique, that helps us to avoid EXTRA divs
@@ -146,9 +155,3 @@ import App from './components/app/';
 //   </React.StrictMode>,
 //   document.getElementById('root')
 // );
-ReactDOM.render(
-  <React.StrictMode>
-	  <App/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
