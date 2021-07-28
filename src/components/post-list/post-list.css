@@ -4,4 +4,8 @@
 .app-list .list-group-item {
   padding: 20px 35px 10px 35px;
   margin-top: 10px;
+  transition: background .15s cubic-bezier(0.4, 0, 1, 1) ;
+}
+.list-group-item:hover {
+  background: rgba(170, 170, 170, 0.5);
 }

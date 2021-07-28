@@ -9,7 +9,7 @@ const Header = styled.div`
     justify-content: space-between;
     h1 {
         font-size: 26px;
-        color: ${props => props.colored ? 'red' : 'black'}; 
+        color: ${props => props.colored ? 'black' : 'red'}; 
         :hover {
             color: blue;
         }
@@ -23,15 +23,15 @@ const Header = styled.div`
 const AppHeader = () => {
     // Making it static then we will change it
     return (
-        // <Header colored> 
-        //     <h1>Abdullaev Abdulaziz</h1>
-        //     <h2>5 post, 0 was liked</h2>
-        // </Header>
-        // for example we wanna change div to anchor element
-        <Header as='a' colored> 
+        <Header colored> 
             <h1>Abdullaev Abdulaziz</h1>
             <h2>5 post, 0 was liked</h2>
         </Header>
+        // for example we wanna change div to anchor element
+        // <Header as='a' colored> 
+        //     <h1>Abdullaev Abdulaziz</h1>
+        //     <h2>5 post, 0 was liked</h2>
+        // </Header>
     )   
 }
 // We made appHeader and exported it to use
