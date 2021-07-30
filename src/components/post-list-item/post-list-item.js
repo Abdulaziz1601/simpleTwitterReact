@@ -30,7 +30,7 @@ export default class PostListItem extends Component {
 
     render() {
         // In function components, to fetch data we use props, in class-components we use "this"
-        const {label} = this.props; // props property for class-components 
+        const {label, onDelete} = this.props; // props property for class-components 
         const {important, like} = this.state;
         
         let classNames = "app-list-item d-flex justify-content-between";
@@ -46,8 +46,8 @@ export default class PostListItem extends Component {
         return (
             <div className={classNames}>
                 <span
-                    className="app-list-item-label"
-                    onClick={this.onLike} >
+                className="app-list-item-label"
+                onClick={this.onLike} >
                     {label}
                 </span>
                 <div className="d-flex justify-content-center align-items-center">
@@ -59,7 +59,9 @@ export default class PostListItem extends Component {
                     </button>
                     <button 
                     type="submit"
-                    className="btn-trash btn-sm">
+                    className="btn-trash btn-sm"
+                    onClick={onDelete}>
+                        {/* Post Delete */}
                         <i className="fa fa-trash"></i>
                     </button>
                     <i className="fa fa-heart"></i>

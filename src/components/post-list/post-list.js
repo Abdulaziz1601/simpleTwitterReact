@@ -6,7 +6,7 @@ import { ListGroup } from 'reactstrap';
 import './post-list.css'
 
 // Destructuring the props
-const PostList = ({posts}) => {
+const PostList = ({posts, onDelete}) => {
     // map transforms an array and returns as new
     const elements = posts.map(item => {
         const {id, ...itemProps} = item;
@@ -17,7 +17,8 @@ const PostList = ({posts}) => {
                     // label={item.label}
                     // important={item.important}
                     // same as 
-                    {...itemProps} /> 
+                    {...itemProps}
+                    onDelete={() => onDelete(id)}/> 
             </li>
         )
     })
