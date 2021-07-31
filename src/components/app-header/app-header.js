@@ -20,12 +20,12 @@ const Header = styled.div`
     }`
 
 
-const AppHeader = () => {
+const AppHeader = ({liked, allPosts}) => {
     // Making it static then we will change it
     return (
         <Header colored> 
             <h1>Abdullaev Abdulaziz</h1>
-            <h2>5 post, 0 was liked</h2>
+            <h2>{allPosts} post, {liked} was liked</h2>
         </Header>
         // for example we wanna change div to anchor element
         // <Header as='a' colored> 
